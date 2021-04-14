@@ -10,6 +10,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
+        model.addAttribute("descriptionText", "This file is rendered by a Spring ...");
         // this attribute will be available in the view index.html as a thymeleaf variable
         model.addAttribute("eventName", "FIFA 2018");
         // this just means render index.html from static/ area
